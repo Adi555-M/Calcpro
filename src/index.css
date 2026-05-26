@@ -1,16 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --color-yellow-primary: #FFD700;
-  --color-blue-secondary: #1E90FF;
-  --color-dark-text: #333333;
+  --color-blue-secondary: #0051ba;
+  --color-dark-text: #121c2c;
   --color-light-text: #FFFFFF;
-  --color-button-bg: #FFEC8B;
-  --color-button-text: #333333;
-  --color-button-hover: #FFD700;
-  --color-calculator-bg: #F0F8FF;
+}
+
+/* Base Body Design theme */
+body {
+  background-color: #030f26;
+  color: #f8fafc;
+}
+
+/* Custom CSS overrides for Tactile Style Console */
+.tactile-finance-console {
+  background-color: #002e6e !important;
+  color: #ffffff !important;
+  border-color: #ffd700 !important;
+}
+
+.tactile-finance-console h3 {
+  color: #ffd700 !important;
+  font-family: "Space Grotesk", sans-serif !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3) !important;
+}
+
+.tactile-finance-console label {
+  color: #38bdf8 !important; /* Vibrant sky-blue labels */
+  font-weight: 700 !important;
+}
+
+.tactile-finance-console .text-slate-600,
+.tactile-finance-console .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Range inputs (sliders) */
+.tactile-finance-console input[type="range"] {
+  accent-color: #ffd700 !important;
+  background-color: #121c2c !important;
+}
+
+/* Numeric textboxes & selectors */
+.tactile-finance-console input[type="number"],
+.tactile-finance-console select {
+  background-color: #121c2c !important;
+  color: #ffd700 !important;
+  border: 3px solid #ffd700 !important;
+  border-radius: 14px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
+  padding: 0.75rem !important;
+}
+
+.tactile-finance-console input[type="number"]:focus,
+.tactile-finance-console select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5) !important;
+  outline: none !important;
+}
+
+/* The dark-screen outputs block */
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5,
+.tactile-finance-console .lg\:col-span-5,
+.tactile-finance-console .xl\:col-span-5 {
+  background-color: #121c2c !important;
+  border: 6px solid #ffd700 !important;
+  border-radius: 28px !important;
+  color: #34d399 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  box-shadow: inset 0 4px 12px rgba(0,0,0,0.9), 0 10px 25px rgba(0,0,0,0.5) !important;
+  padding: 1.5rem !important;
+}
+
+.tactile-finance-console .lg\:col-span-5 h3,
+.tactile-finance-console .xl\:col-span-5 h3 {
+  color: #ffd700 !important;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+/* The result value cards inside the LCD screen */
+.tactile-finance-console .lg\:col-span-5 .bg-white,
+.tactile-finance-console .xl\:col-span-5 .bg-white,
+.tactile-finance-console .lg\:col-span-5 .bg-slate-50,
+.tactile-finance-console .xl\:col-span-5 .bg-slate-50,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .bg-white,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .bg-slate-50 {
+  background-color: #0b1421 !important;
+  border: 1px solid rgba(255, 215, 0, 0.2) !important;
+  color: #34d399 !important;
+  box-shadow: none !important;
+}
+
+/* Alternate indicators & recommendations */
+.tactile-finance-console .bg-teal-50,
+.tactile-finance-console .bg-indigo-50,
+.tactile-finance-console .bg-slate-100 {
+  background-color: #0d346b !important;
+  border: 2px solid #ffd700 !important;
+  color: #ffd700 !important;
+}
+
+/* Glowing text indicators inside the cards */
+.tactile-finance-console .lg\:col-span-5 .bg-white *,
+.tactile-finance-console .xl\:col-span-5 .bg-white *,
+.tactile-finance-console .lg\:col-span-5 .bg-slate-50 *,
+.tactile-finance-console .xl\:col-span-5 .bg-slate-50 *,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .bg-white *,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .bg-slate-50 * {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.tactile-finance-console .lg\:col-span-5 .text-slate-900,
+.tactile-finance-console .lg\:col-span-5 .text-slate-800,
+.tactile-finance-console .lg\:col-span-5 .text-2xl,
+.tactile-finance-console .lg\:col-span-5 .text-3xl,
+.tactile-finance-console .lg\:col-span-5 .text-xl,
+.tactile-finance-console .xl\:col-span-5 .text-slate-900,
+.tactile-finance-console .xl\:col-span-5 .text-slate-800,
+.tactile-finance-console .xl\:col-span-5 .text-2xl,
+.tactile-finance-console .xl\:col-span-5 .text-3xl,
+.tactile-finance-console .xl\:col-span-5 .text-xl,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .text-slate-900,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .text-slate-800,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .text-2xl,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .text-3xl,
+.tactile-finance-console .lg\:col-span-12.xl\:col-span-5 .text-xl {
+  color: #34d399 !important; 
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.tactile-finance-console .text-teal-700,
+.tactile-finance-console .text-indigo-800,
+.tactile-finance-console .text-teal-800 {
+  color: #34d399 !important;
+}
+
+.tactile-finance-console .lg\:col-span-5 span.text-slate-400 {
+  color: #38bdf8 !important; /* Sky Blue subtitle labels on the dark screen */
+  font-family: "Space Grotesk", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Glowing value badge at the top of input range sliders */
+.tactile-finance-console .text-teal-600.bg-teal-50 {
+  background-color: #121c2c !important;
+  color: #ffd700 !important;
+  border: 1.5px solid rgba(255, 215, 0, 0.4) !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Legend items text */
+.tactile-finance-console .recharts-legend-item-text {
+  color: #38bdf8 !important;
+  font-size: 11px !important;
+}
+
+/* Scrollbar customizations */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #002e6e;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 4px;
 }
